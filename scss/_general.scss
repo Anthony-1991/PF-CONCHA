@@ -1,0 +1,99 @@
+$color_titulo_h2: radial-gradient(ellipse, white, #c0d4ff, rgb(0, 81, 255));
+
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+.contenedor_completo{
+    background-image: url(../assets/img/imagenmosaico3.png);
+    font-family: "Sriracha-Regular";
+    width: 100vw;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 600px;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    .btn{
+            gap: 50px;
+            position: relative;
+            padding: 10px 40px;
+            text-decoration: none;
+            color: #fff;
+        }
+        
+    .btn-1{
+            border: 3px solid #17a2ff;
+            overflow: hidden;
+        }
+    
+    .btn-1::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            background-color: rgb(10, 157, 255);
+            z-index: -2;
+        }
+    
+    .btn-1::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            left: 0;
+            bottom: -150%;
+            border-radius: 30%;
+            background-color: #151e3f;
+            z-index: -1;
+        }
+    
+    .btn-1:hover::before{
+            animation: btn-1 2s linear both;
+        }
+    
+    @keyframes btn-1{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                bottom: 100px;
+                transform: rotate(360deg);
+            }
+        }
+
+
+    }
+
+
+@font-face{
+    font-family: "Montserrat-Light";
+    src:url(../assets/font/Montserrat-Light.ttf)
+}
+
+@font-face{
+    font-family: "Sriracha-Regular";
+    src:url(../assets/font/Sriracha-Regular.ttf)
+}
+
+h1, h2, h3, h4{
+    font-family: "Montserrat-Light";
+}
+
+.main{
+    grid-area: main; 
+    width: 100vw;
+    }
+
+
